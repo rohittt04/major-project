@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Data</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+      }
+      h2 {
+        color: #333;
+        text-align: center;
+      }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: center;
+      }
+      th {
+        background-color: #5c989c;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .btn-dark {
+        background-color: #5c989c;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: none;
+      }
+      .btn-dark:hover {
+        background-color: #23272b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container my-3">
+      <h2>Your Data:</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Password</th>
+            <th scope="col">Email</th>
+            <th scope="col">Date Created</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in all_data %}
+          <tr>
+            <th scope="row">{{ data.sno }}</th>
+            <td>{{ data.name }}</td>
+            <td>{{ data.password }}</td>
+            <td>{{ data.email }}</td>
+            <td>{{ data.data_created }}</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-dark"
+                onclick="window.location.href='/Delete/{{data.sno}}'"
+              >
+                Delete
+              </button>
+              
+            </td>
+          </tr>
+         
+          {% endfor %}
+        </tbody>
+      </table>
+      <button class="btn btn-dark" onclick="window.location.href='/'">Exit</button>
+    </div>
+  </body>
+</html>

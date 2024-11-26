@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Data Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+      }
+      h2 {
+        color: #333;
+        text-align: center;
+      }
+      .form-label {
+        font-weight: bold;
+        color: #555;
+      }
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background-color: #5c989c; 
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 10px; 
+      }
+      .btn:hover {
+        background-color: #5c989c; 
+      }
+      .btn-secondary {
+        background-color: #5c989c; 
+        display: block;
+      }
+      .btn-secondary:hover {
+        background-color: #5c989c; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container my-3">
+      <h2>Insert Data from here:</h2>
+      <form method="POST" action="/">
+        <div class="mb-3">
+          <label for="exampleInputName" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputName"
+            name="name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            name="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            name="password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <button class="btn btn-secondary" onclick="window.location.href='/table'">View Data</button>
+    </div>
+  </body>
+</html>
